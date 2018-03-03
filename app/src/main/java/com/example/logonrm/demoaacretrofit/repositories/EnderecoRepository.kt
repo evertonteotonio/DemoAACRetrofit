@@ -8,6 +8,6 @@ import com.example.logonrm.demoaacretrofit.entities.EnderecoResponse
  */
 interface  EnderecoRepository {
 
-    fun BuscarEndereco(cep: String): LiveData<EnderecoResponse>
+    fun buscarEndereco(cep: String): LiveData<EnderecoResponse>
 
 }
