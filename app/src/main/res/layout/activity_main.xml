@@ -8,6 +8,8 @@
     tools:context="com.example.logonrm.demoaacretrofit.ui.mainscreen.MainActivity">
 
 <EditText
+    android:inputType="number"
+    android:maxLength="8"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/etCep"

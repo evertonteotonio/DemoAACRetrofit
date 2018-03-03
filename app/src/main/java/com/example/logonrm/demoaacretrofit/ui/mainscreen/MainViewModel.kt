@@ -23,8 +23,6 @@ class MainViewModel : ViewModel() {
     }
 
     fun pesquisarEndereco(cep: String) : LiveData<EnderecoResponse>{
-//        /apiResponse.addSource(enderecoRepository.buscarEndereco(cep))
-
         mApiResponse.addSource(enderecoRepository.buscarEndereco(cep)){
             apiResponse -> mApiResponse.value = apiResponse
         }
