@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import com.example.logonrm.demoaacretrofit.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -41,7 +42,14 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        mainViewModel.isLoading.observe(this, Observer { isLoading ->
 
+            if (isLoading!!){
+                loading.visibility = View.VISIBLE
+            }else{
+                loading.visibility = View.GONE
+            }
+        })
 
     }
 }
